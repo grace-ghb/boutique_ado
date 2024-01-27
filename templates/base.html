@@ -29,7 +29,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Boutique Ado</title>
+    <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top"></header>
@@ -37,6 +37,15 @@
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
+
+    {% block page_header %}   <!--Additional header-->
+    {% endblock %}
+
+    {% block content %}   <!--This is where the content go.-->
+    {% endblock %}
+
+    {% block postloadjs %}    <!--For additional JS-->
+    {% endblock %}
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
