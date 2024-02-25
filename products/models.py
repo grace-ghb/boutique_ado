@@ -5,6 +5,10 @@ class Category(models.Model):
     This is to give our products a category like
     clothing, kitchen and dining or deals.
     """
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+        
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
