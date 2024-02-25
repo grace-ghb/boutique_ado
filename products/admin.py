@@ -15,7 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
 
     ordering = ('sku',)
 
-class CategorytAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
@@ -23,4 +23,4 @@ class CategorytAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Category, CategorytAdmin)
+admin.site.register(Category, CategoryAdmin)
