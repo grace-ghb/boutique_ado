@@ -1,12 +1,13 @@
+"""
+    The functionality for the shopping bag, this function return a dict called context
+    which is know as context processor. It's purpose is to make this dic available
+    to all templates across the entire applicarion
+"""
 from decimal import Decimal
 from django.conf import settings
 
 def bag_contents(request):
-    """
-    The functionality for the shopping bag, this function return a dict called context
-    which is know as context processor. It's purpose is to make this dic available
-    to all templates across the entire applicarion
-    """
+
     bag_items = []
     total = 0
     product_count = 0
